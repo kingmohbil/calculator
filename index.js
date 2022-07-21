@@ -1,13 +1,22 @@
 function add(a, b) {return a+b;}
-function divide(a, b){return a/b;}
+function divide(a, b){
+    if(b!==0){
+    return a/b;}
+    else{
+        alert('Error:');
+    }
+
+    }
 function multiply(a, b){return a*b;}
 function subtract(a, b){return a-b;}
-function operate(opreator, a, b){
-    switch(opreator){
+function operate(Opreator, a, b){
+    switch(Opreator){
+        
         case '+':return add(a,b);
         case '-':return subtract(a,b);
         case '*': return multiply(a,b);
         case '/': return divide(a,b);
+        case '':return 0;
     }
 }
 
@@ -24,46 +33,48 @@ for(let i of cols){
 
 
 document.querySelector('#sub').onclick=()=>{ 
-    opreator='-';
-    result=+text;
+    opreator ='-';
+    result = operate(opreator, result, +text);
     display.innerHTML=result;
-    text=''; 
+    text='';
 }
 
 
 document.querySelector('#divide').onclick=()=>{
-    opreator='/';
-    result=+text;
+    opreator ='/';
+    result = operate(opreator, +text, result);
     display.innerHTML=result;
     text=''; 
 }
 
 
 document.querySelector('#sum').onclick=()=>{
-    opreator='+';
-    result=+text;
+    opreator ='+';
+    result = operate(opreator,+text, result);
     display.innerHTML=result;
-    text=''; 
+    text='';
 }
 
 
 document.querySelector('#muilt').onclick=()=>{
-    opreator='+';
-    result=+text;
+    opreator ='*';
+    result = operate(opreator, +text, result);
     display.innerHTML=result;
     text=''; 
 }
 
 document.querySelector('#clear').onclick=()=>{
-    text="";
+    
+    text='';
     display.innerHTML=text;
-    newText='';
+    result=0;
+    opreator ='';
 }
 
 
 document.querySelector('#equal').onclick=()=>{
     result = operate(opreator, result, +text);
     display.innerHTML=result;
-    text=result.toString();
+    text='';
 
 }
