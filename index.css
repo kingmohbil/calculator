@@ -1,0 +1,39 @@
+body{
+    background-color: whitesmoke ;
+}
+div{
+    background-color:white;
+}
+*{
+    box-sizing: border-box;
+}
+.row{
+    display:flex;
+}
+.col{
+    transition:background-color 200ms;
+    display: inline-block;
+    height:100px;
+    width: 100px;
+    padding: auto;
+    border: 1px solid black;
+    text-align: center;
+    line-height:100px;
+    
+}
+#container{
+    height: 400px;
+    width: 400px;
+    margin: auto;
+    margin-top: 12.5vh;
+}
+.display{
+    height: 100px;
+    width: 400px;
+    border: 1px solid black;
+    text-align: center;
+    line-height:100px;
+}
+.col:hover{
+background-color: gray;
+}
