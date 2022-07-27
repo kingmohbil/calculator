@@ -38,10 +38,10 @@ let opreator ='';
 let result ='';
 
 const topScreen = document.querySelector('.top-screen');
-topScreen.innerHTML = '';
+topScreen.innerHTML = 0;
 
 const bottomScreen = document.querySelector('.lower-screen');
-
+bottomScreen.innerHTML =0;
 
 const numbers = document.getElementsByClassName('num');
 for(let element of numbers){
@@ -52,7 +52,7 @@ for(let element of numbers){
 
 document.getElementById('add').onclick=()=>{
     topScreen.innerHTML=result;
-    bottomScreen.innerHTML=number2;
+    bottomScreen.innerHTML='';
     for(let element of numbers){
         element.onclick=()=>{number2 += element.innerHTML
             topScreen.innerHTML=result;
@@ -68,7 +68,7 @@ document.getElementById('add').onclick=()=>{
 }
 document.getElementById('sub').onclick=()=>{
     topScreen.innerHTML=result;
-    bottomScreen.innerHTML=number2;
+    bottomScreen.innerHTML='';
     for(let element of numbers){
         element.onclick=()=>{number2 += element.innerHTML
             topScreen.innerHTML=result;
@@ -85,7 +85,7 @@ document.getElementById('sub').onclick=()=>{
 document.getElementById('divide').onclick= ()=>{
 
     topScreen.innerHTML=result;
-
+    bottomScreen.innerHTML='';
     for(let element of numbers){
         element.onclick=()=>{number2 += element.innerHTML
             topScreen.innerHTML=result;
@@ -101,7 +101,7 @@ document.getElementById('divide').onclick= ()=>{
 
 document.getElementById('muiltiply').onclick= ()=>{
     topScreen.innerHTML=result;
-
+    bottomScreen.innerHTML='';
     for(let element of numbers){
         element.onclick=()=>{number2 += element.innerHTML
             topScreen.innerHTML=result;
@@ -117,7 +117,7 @@ document.getElementById('muiltiply').onclick= ()=>{
 
 document.getElementById('sum').onclick = ()=>{
     topScreen.innerHTML=result;
-
+    bottomScreen.innerHTML='';
     for(let element of numbers){
         element.onclick=()=>{number2 += element.innerHTML
             topScreen.innerHTML=result;
@@ -128,4 +128,18 @@ document.getElementById('sum').onclick = ()=>{
     number1=result;
     number2='';
     opreator='';
+}
+
+document.getElementById('clear').onclick =()=>{
+    number1='';
+    number2='';
+    opreator='';
+    result='';
+    topScreen.innerHTML=result;
+    bottomScreen.innerHTML=number1
+    for(let element of numbers){
+        element.onclick=()=>{number1 += element.innerHTML;
+        topScreen.innerHTML=result;
+        bottomScreen.innerHTML=number1};
+    }
 }

@@ -50,6 +50,7 @@ body{
 .screen{
     flex:1 0;
     display: flex;
+    min-height:50%;
     flex-direction: column;
     background-color: #b1cbbb;
     border-radius: 12px;
@@ -57,14 +58,15 @@ body{
     align-items: flex-end;
 }
 .header{
-    padding: 16px;
+ padding: 16px;
  background-color: #5b9aa0;
  align-self: stretch;
  font-size: 28px;
+ border-radius: 0px 0px 12px 12px;
 }
 .screen > div{
-    height: 50%;
-    flex: 1 ;
+    min-height: 50%;
+    flex: 1 0 auto;
     display: flex;
     align-items: center;
     font-size:large;
@@ -79,6 +81,7 @@ body{
 }
 
 .footer{
+    border-radius: 12px 12px 0px 0px;
     align-self: stretch;
     text-align: center;
     padding:8px;
